@@ -1,31 +1,101 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Pagina di stato di BresciaPedala (https://bresciapedala.duckdns.org)
+# Docs: https://upptime.js.org/docs/configuration
+owner: robertostefana
+repo: bresciapedala-status
+user-agent: bresciapedala-status
 
+assignees:
+  - robertostefana
+
+# Ogni controllo e' "su" se risponde 2xx/3xx; gli endpoint /api/status/* rispondono 503 quando il componente non funziona.
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Sito
+    url: https://bresciapedala.duckdns.org/
+  - name: API
+    url: https://bresciapedala.duckdns.org/api/health
+  - name: Database
+    url: https://bresciapedala.duckdns.org/api/status/db
+  - name: Mappa
+    url: https://bresciapedala.duckdns.org/api/status/tiles
+  - name: Dati OSM
+    url: https://bresciapedala.duckdns.org/api/status/overpass
+  - name: Ricerca luoghi
+    url: https://bresciapedala.duckdns.org/api/status/geocoder
+  - name: Email
+    url: https://bresciapedala.duckdns.org/api/status/mail
+  - name: Backup
+    url: https://bresciapedala.duckdns.org/api/status/backup
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  baseUrl: /bresciapedala-status
+  name: BresciaPedala
+  introTitle: "**BresciaPedala**"
+  introMessage: Stato dei servizi di BresciaPedala, aggiornato ogni 5 minuti.
   navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Stato
+      href: https://robertostefana.github.io/bresciapedala-status/
+    - title: BresciaPedala
+      href: https://bresciapedala.duckdns.org
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+i18n:
+  activeIncidents: Incidenti in corso
+  allSystemsOperational: Tutti i servizi funzionano
+  incidentReport: "Rapporto incidente #$NUMBER →"
+  activeIncidentSummary: Aperto il $DATE con $POSTS aggiornamenti
+  incidentTitle: Dettagli incidente $NUMBER
+  incidentDetails: Dettagli incidente
+  incidentFixed: Risolto
+  incidentOngoing: In corso
+  incidentOpenedAt: Aperto il
+  incidentClosedAt: Chiuso il
+  incidentViewOnGitHub: Vedi e segui su GitHub
+  incidentCommentSummary: Pubblicato il $DATE da $AUTHOR
+  incidentBack: ← Torna a tutti gli incidenti
+  pastIncidents: Incidenti passati
+  pastIncidentsResolved: Risolto in $MINUTES minuti con $POSTS aggiornamenti
+  liveStatus: Stato attuale
+  overallUptime: "Disponibilità complessiva: $UPTIME"
+  overallUptimeTitle: Disponibilità complessiva
+  averageResponseTime: "Tempo medio di risposta: $TIMEms"
+  averageResponseTimeTitle: Risposta media
+  sevelDayResponseTime: Tempo di risposta a 7 giorni
+  responseTimeMs: Tempo di risposta (ms)
+  up: Funziona
+  down: Non funziona
+  degraded: Rallentato
+  ms: ms
+  loading: Caricamento
+  navGitHub: GitHub
+  footer: Questa pagina è [open source]($REPO), realizzata con [Upptime](https://upptime.js.org)
+  rateLimitExceededTitle: Limite di richieste superato
+  rateLimitExceededIntro: Hai superato il numero di richieste consentite in un'ora. Attendi prima di riaprire la pagina, oppure aggiungi un Personal Access Token di GitHub.
+  rateLimitExceededWhatDoesErrorMean: Cosa significa questo errore?
+  rateLimitExceededErrorMeaning: Questa pagina legge lo stato in tempo reale dalle API di GitHub, che consentono 60 richieste all'ora per indirizzo IP, e le hai esaurite.
+  rateLimitExceededErrorHowCanFix: Come risolvere?
+  rateLimitExceededErrorFix: Attendi un'ora perché il limite del tuo indirizzo IP si ripristini, oppure aggiungi un Personal Access Token di GitHub, che dà altre 5.000 richieste all'ora.
+  rateLimitExceededGeneratePAT: Come generare un Personal Access Token
+  rateLimitExceededHasSet: Hai impostato un Personal Access Token.
+  rateLimitExceededRemoveToken: Rimuovi il token
+  rateLimitExceededGitHubPAT: Personal Access Token di GitHub
+  rateLimitExceededCopyPastePAT: Incolla il tuo token
+  rateLimitExceededSaveToken: Salva il token
+  errorTitle: Si è verificato un errore
+  errorIntro: Non è stato possibile leggere lo stato più recente.
+  errorText: Riprova fra qualche istante.
+  errorHome: Torna alla pagina iniziale
+  pastScheduledMaintenance: Manutenzioni passate
+  scheduledMaintenance: Manutenzione programmata
+  scheduledMaintenanceSummaryStarted: Iniziata il $DATE, durata $DURATION minuti
+  scheduledMaintenanceSummaryStarts: Inizia il $DATE, durata $DURATION minuti
+  startedAt: Iniziata il
+  startsAt: Inizia il
+  duration: Durata
+  durationMin: $DURATION minuti
+  incidentCompleted: Completata
+  incidentScheduled: Programmata
+  duration24H: 24h
+  duration7D: 7g
+  duration30D: 30g
+  duration1Y: 1a
+  durationAll: tutto
+  locale: it-IT
