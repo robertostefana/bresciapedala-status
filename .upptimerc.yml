@@ -25,6 +25,8 @@ sites:
     url: https://bresciapedala.duckdns.org/api/status/mail
   - name: Backup
     url: https://bresciapedala.duckdns.org/api/status/backup
+  - name: Navigatore
+    url: https://bresciapedala.duckdns.org/api/status/routing
 
 status-website:
   baseUrl: /bresciapedala-status
