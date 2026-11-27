@@ -76,21 +76,21 @@
     "url": "https://bresciapedala.duckdns.org/api/status/overpass",
     "icon": "https://icons.duckduckgo.com/ip3/bresciapedala.duckdns.org.ico",
     "slug": "dati-osm",
-    "status": "down",
-    "uptime": "94.33%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "94.33%",
-    "uptimeYear": "94.33%",
-    "time": 1180,
-    "timeDay": 4120,
-    "timeWeek": 2809,
-    "timeMonth": 1180,
-    "timeYear": 1180,
+    "status": "up",
+    "uptime": "92.59%",
+    "uptimeDay": "58.13%",
+    "uptimeWeek": "94.02%",
+    "uptimeMonth": "92.59%",
+    "uptimeYear": "92.59%",
+    "time": 1389,
+    "timeDay": 5159,
+    "timeWeek": 3251,
+    "timeMonth": 1389,
+    "timeYear": 1389,
     "dailyMinutesDown": {
       "2026-11-06": 466,
       "2026-11-05": 1354,
-      "2026-11-27": 0
+      "2026-11-27": 603
     }
   },
   {
